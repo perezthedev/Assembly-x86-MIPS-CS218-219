@@ -1,0 +1,29 @@
+set logging overwrite
+
+set logging file output.txt
+
+set logging on
+
+echo LIST 3:	
+
+x/50uw &list3
+
+echo Even Count:
+x/ub &evenCount
+
+echo Odd Count:
+x/ub &oddCount
+
+echo Sum:
+x/ug &sum
+
+echo Minimum:
+x/uw &minimum
+
+echo Maximum:
+x/uw &maximum
+
+echo Average:
+x/uw &average
+
+set logging off
