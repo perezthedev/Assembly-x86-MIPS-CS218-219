@@ -70,7 +70,7 @@
 		mov r10, 0
 		mov r10d, 10
 		mov eax, dword[%2]
-		mul r10d		; edx:eax
+		imul r10d		; edx:eax
 		mov dword[%2], eax
 		; adds arg1
 		mov rax, 0
@@ -91,7 +91,7 @@
 		cmp r9, 0
 		je %%intStringDone
 		mov rax, -1
-		mul dword[%2]
+		imul dword[%2]
 		mov dword[%2], eax
 		
 	%%intStringDone:
