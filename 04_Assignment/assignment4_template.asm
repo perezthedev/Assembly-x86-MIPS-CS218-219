@@ -46,6 +46,12 @@
 ; Macro 3 - Convert a Decimal String to Integer
 ; Argument 1: null terminated string (byte array)
 ; Argument 2: dword integer variable
+; move byte of string into bl
+; cmp bl to different cases
+; if '-' change signFlag to mul later
+; once cases are checked,
+; y = arg2*10
+; y = y + arg1
 %macro convertDecimalToInteger 2
 	; YOUR CODE HERE
 	; arg2 is assumed to be 0 starting value
@@ -99,6 +105,13 @@
 %endmacro
 
 ; Macro 4 - Convert an Integer to a Hexadecimal String
+; move '0' and 'x' into arg2 string
+; also add NULL at end of arg2 string
+; loop the division, clearing out remainder BEFORE each go
+; if 0-9 add 48 else 55
+; mov dl(the remainder + values) into arg2
+; loop until index == 1; as to not overwrite "0x"
+
 ; Argument 1: dword integer variable
 ; Argument 2: string (11 byte array)
 %macro convertIntegerToHexadecimal 2
@@ -108,7 +121,7 @@
 	mov byte[%2+1], 'x'
 	mov byte[%2 + 10], NULL
 	mov r9d, 16			; divisor
-	mov r10, 9
+	mov r10, 9			; index
 	mov eax, dword[%1]
 	%%toHexLoop:
 		mov edx, 0
