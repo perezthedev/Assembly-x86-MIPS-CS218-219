@@ -1,0 +1,9 @@
+set logging overwrite
+set logging file answers.txt
+set logging on
+echo Float Values:  \n
+x/75f $rbp - 300
+echo \n
+echo Median: \n
+print $xmm0
+set logging off
