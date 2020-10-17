@@ -8,3 +8,5 @@ Assignment List:
 04 - used multiple macros to convert data representation
       - also learned to always clear out edx(rem) register when looping it
 05 - used system calls to output, input and used macros from assignment 4; convert from decimal to hex
+06 - 
+07 - explored using local variables in functions and floating points to calculate hypotenuse
