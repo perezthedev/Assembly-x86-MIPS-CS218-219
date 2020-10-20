@@ -10,3 +10,4 @@ Assignment List:
 05 - used system calls to output, input and used macros from assignment 4; convert from decimal to hex
 06 - 
 07 - explored using local variables in functions and floating points to calculate hypotenuse
+08 - polyglot, used to check 3 args and flags as well as proper input, while also using argv
